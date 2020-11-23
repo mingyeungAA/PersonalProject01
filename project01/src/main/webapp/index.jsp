@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>INDEX PAGE</h1>
-	<a href="">Login</a>
+	<a href="loginform.do">Login</a>
 	<a href="main.do">Main</a>
 	
 </body>
