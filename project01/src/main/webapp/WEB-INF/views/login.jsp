@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="resources/js/login.js"></script>
 </head>
 <body>
 <h1>Login Form</h1>
-<form action="login.do">
 	<table border="1">
 		<tr>
 			<th>ID</th>
@@ -20,11 +21,10 @@
 		</tr>
 		<tr>
 			<td colspan="2" align="right">
-				<input type="submit" value="LOGIN">
+				<input type="button" value="LOGIN" onclick="login();">
 			</td>
 		</tr>
 	</table>
-</form>
 <div>
 	<a href="">Forget ID?</a>
 	<a href="">Forget PW?</a>
