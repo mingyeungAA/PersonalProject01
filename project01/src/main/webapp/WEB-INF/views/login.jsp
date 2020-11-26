@@ -13,7 +13,7 @@
 	<table border="1">
 		<tr>
 			<th>ID</th>
-			<td><input type="text" class="user_id" name="user_id" placeholder="ID"></td>
+			<td><input type="text" class="user_id" name="user_id" placeholder="ID" autofocus="autofocus"></td>
 		</tr>
 		<tr>
 			<th>PW</th>
@@ -21,7 +21,7 @@
 		</tr>
 		<tr>
 			<td colspan="2" align="right">
-				<input type="button" value="LOGIN" onclick="login();">
+				<input type="button" value="LOGIN" onclick="loginPrc();">
 			</td>
 		</tr>
 	</table>

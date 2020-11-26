@@ -1,15 +1,11 @@
 let user_id ;
 let user_pw;
 
-window.onload = function(){
-	
-}
-
-
-function login(){
-	user_id = document.getElementsByClassName("user_id")[0].val();
-	user_pw =  document.getElementsByClassName("user_pw")[0].val();
-	
+function loginPrc(){
+	user_id = $(".user_id").val().trim();
+	user_pw = $(".user_pw").val().trim();
+	console.log("user_id : "+user_id);
+	console.log("user_pw: "+user_pw);
 	let loginVal = {
 			"user_id":user_id,
 			"user_pw":user_pw
@@ -18,15 +14,22 @@ function login(){
 		alert("ID와  PW를 입력해주세요!");
 	}else{
 		$.ajax({
+			type:"post",
 			url:"login.do",
 			data: JSON.stringify(loginVal),
 			contentType: "application/json",
-			dataType: json,
+			dataType: "json",
 			success : function(data){
-				console.log("data : "+data);
+				if(data.check == true){
+					
+					location.href="main.do";
+				}else{
+					alert("ID 혹은 PW가 틀렸습니다!")
+				}
+				
 			},
 			error: function(data){
-				
+				alert("통신실패!!!ㅠㅠㅠ");
 			}
 		});
 	}

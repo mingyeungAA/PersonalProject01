@@ -3,7 +3,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="com.mvc.mall.dto.UserDto"/>
+		<typeAlias type="com.mvc.mall.dto.UserDto" alias="UserDto"/>
 	</typeAliases>
 	
 	<mappers>

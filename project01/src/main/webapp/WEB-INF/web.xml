@@ -59,7 +59,7 @@
 	<!-- LogFilter -->
 	<filter>
 		<filter-name>LogFilter</filter-name>
-		<filter-class>com.mvc.upgrade.common.filter.LogFilter</filter-class>
+		<filter-class>com.mvc.mall.common.filter.LogFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>LogFilter</filter-name>
