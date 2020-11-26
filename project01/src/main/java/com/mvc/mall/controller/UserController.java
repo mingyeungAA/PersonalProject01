@@ -26,6 +26,7 @@ public class UserController {
 	private UserBiz userBiz;
 	
 	
+	/* 로그인 */
 	@RequestMapping("/loginform.do")
 	public String loginForm() {
 		logger.info(">> Login [loginForm] Controller");
@@ -48,6 +49,20 @@ public class UserController {
 		map.put("check", check);
 		
 		return map;
+	}
+	
+	/* 회원가입 */
+	@RequestMapping("/signupform.do")
+	public String signupForm() {
+		logger.info(">> Join Us [signupForm] Controller");
+		return "signup";
+	}
+	
+	@RequestMapping("/signupres.do")
+	public String signupRes() {
+		logger.info(">> Join Us [signupRes] Controller");
+		
+		return "";
 	}
 
 }

@@ -9,7 +9,7 @@
 <script type="text/javascript" src="resources/js/login.js"></script>
 </head>
 <body>
-<h1>Login Form</h1>
+<h1>LOGIN</h1>
 	<table border="1">
 		<tr>
 			<th>ID</th>
@@ -30,7 +30,7 @@
 	<a href="">Forget PW?</a>
 </div>
 <div>
-	<input type="button" value="Sign Up">
+	<input type="button" value="Join Us" onclick="location.href='signupform.do'">
 </div>
 </body>
 </html>
