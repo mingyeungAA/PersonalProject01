@@ -40,18 +40,18 @@
 		<tr>
 			<th rowspan="3">주소</th>
 			<td>
-				<input type="text" id="postcode" placeholder="우편번호">
+				<input type="text" id="postcode" placeholder="우편번호" required="required">
 				<input type="button" value="우편번호" onclick="exePostCode();">
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<input type="text" id="address" placeholder="주소">
+				<input type="text" id="address" placeholder="주소" required="required">
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<input type="text" id="detailAddress" placeholder="나머지 주소">
+				<input type="text" id="detailAddress" placeholder="나머지 주소" required="required">
 			</td>
 		</tr>
 	</table>
