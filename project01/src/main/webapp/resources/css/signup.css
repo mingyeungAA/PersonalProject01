@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+h1{
+	margin-left: 50%;
+}
+table{
+	margin-left: 3%;
+	border-collapse: collapse;
+	width: 90%;
+}
 th {
 	text-align: left;
 	padding-right: 2rem;
@@ -7,18 +15,34 @@ th {
 	font-size: 13px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
+	padding: 20px 10px 20px 18px;
+}
+tr{
+	border-bottom: 1px solid #ebebeb;
+	
+}
+td{
+	padding: 15px 0px 20px;
 }
 	
-#postcode{
-	width: 80px;
-}
 input{
 	height: 25px;
 	border: 1px solid #ebebeb;
+	margin: 4px 0px 0px;
 }
+
+/*회원가입 버튼*/
 div{
 	position: absolute;
-	left: 30%;
+	left: 50%;
+}
+div input:hover{
+	background-color: #5f5f5f;
+	color: white;
+}
+
+#postcode{
+	width: 80px;
 }
 
 .name_text{
@@ -35,4 +59,11 @@ div{
 	text-align: center;
 	color: #808080;
 	font-size: 9pt;
+}
+
+#address{
+	width: 250px;
+}
+#detailAddress{
+	width: 250px;
 }
