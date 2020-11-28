@@ -55,6 +55,14 @@ public class UserController {
 		return map;
 	}
 	
+	/**/
+	@RequestMapping("/logout.do")
+	public String logout(HttpSession session) {
+		logger.info(">> Logout [logout] Controller");
+		session.invalidate();
+		return "redirect:/";
+	}
+	
 	/* 회원가입 */
 	@RequestMapping("/signupform.do")
 	public String signupForm() {

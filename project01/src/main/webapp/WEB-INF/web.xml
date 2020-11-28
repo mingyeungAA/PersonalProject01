@@ -10,6 +10,10 @@
 		<param-value>/WEB-INF/spring/appServlet/root-context.xml</param-value>
 	</context-param>
 
+	<welcome-file-list>
+		<welcome-file>/main.do</welcome-file>
+	</welcome-file-list>
+
 	<!-- 02. -->
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
