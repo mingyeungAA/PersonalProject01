@@ -55,7 +55,7 @@ public class UserController {
 		return map;
 	}
 	
-	/**/
+	/* 로그아웃 */
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		logger.info(">> Logout [logout] Controller");

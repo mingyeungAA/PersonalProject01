@@ -54,6 +54,11 @@
 				<input type="text" id="detailAddress" placeholder="나머지 주소" required="required">
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<input type="">
+			</td>
+		</tr>
 	</table>
 </body>
 </html>

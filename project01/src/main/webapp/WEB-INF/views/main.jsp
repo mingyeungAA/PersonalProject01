@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 onclick="location.href='main.do'">MAIN</h1>
+	<h1 onclick="location.href='main.do'"><img src="resources/image/LOGO.svg"></h1>
 	<c:choose>
 		<c:when test="${login != null }">
 			<a href="logout.do">logout</a>
