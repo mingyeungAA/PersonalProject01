@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mvc.mall.biz.UserBiz;
@@ -68,6 +69,16 @@ public class UserController {
 	public String signupForm() {
 		logger.info(">> Join Us [signupForm] Controller");
 		return "signup";
+	}
+	
+	@RequestMapping("/idvalidity.do")
+	@ResponseBody
+	public String idValidity(@RequestParam("user_id") String user_id) {
+		logger.info(">> Join Us [idValidity] Controller");
+		int res = userBiz.idValidity(user_id);
+		String res1 = Integer.toString(res);
+		
+		return res1;
 	}
 	
 	@RequestMapping("/signupres.do")

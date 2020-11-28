@@ -32,6 +32,48 @@ function exePostCode(){
 	}).open();
 }
 
-//아이디 유효성
+//아이디 유효성 (영문소문자/숫자, 6~12자)
 //이메일 유효성
-//비밀번호 유효성
+//비밀번호 유효성 (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)
+let idRex;
+let idRex2;
+let han;
+let han2;
+$(document).ready(function(){
+	$(".user_id").keyup(function(){
+		var user_id = $(".user_id").val();
+		$.ajax({
+			url: "idvalidity.do?user_id="+user_id,
+			type: 'get',
+			success: function(data){
+				idRex = /^[A-Za-z0-9]{6,12}$/;
+				idRex2 = /[a-zA-Z0-9]/;
+				han = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+				han2 = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]{6,12}$/;
+				
+				if(data==1){
+					console.log("data : "+data);
+					$(".id_text").text("");
+					$(".id_text").text("이미 존재하는 아이디입니다.");
+				}else{
+					if(idRex.test(user_id) && !han.test(user_id)){
+						$(".id_text").text("사용가능한 아이디입니다.")
+					}else if(user_id == ""){
+						$(".id_text").text("아이디를 입력해주세요.(영문소문자/숫자, 6~12자)");
+					}else if((han.test(user_id) && han2.test(user_id)) 
+							|| (idRex.test(user_id)) 
+							|| ((user_id.search(idRex2) >= 0 
+							&& user_id.search(han) >= 0)) 
+							&& user_id.length >= 6){
+						$(".id_text").text("아이디는 영문소문자/숫자만 가능합니다.");
+					}else{
+						$(".id_text").text("아이디는 6-12자 이내로 입력해주세요.");
+					}
+				}
+			},
+			error: function(data){
+				alert("통신실패!!!");
+			}
+		});
+	})
+})

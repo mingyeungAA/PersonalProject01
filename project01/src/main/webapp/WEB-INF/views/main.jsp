@@ -6,17 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Angle Recipe</title>
 </head>
 <body>
-	<h1 onclick="location.href='main.do'"><img src="resources/image/LOGO.svg"></h1>
-	<c:choose>
-		<c:when test="${login != null }">
-			<a href="logout.do">logout</a>
-		</c:when>
-		<c:otherwise>
-			<a href="loginform.do">login</a>
-		</c:otherwise>
-	</c:choose>
+	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
+	<h2>메인이다아아앙ㅇ</h2>
 </body>
 </html>

@@ -9,6 +9,7 @@
 <script type="text/javascript" src="resources/js/login.js"></script>
 </head>
 <body>
+<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
 <h1>LOGIN</h1>
 	<table border="1">
 		<tr>

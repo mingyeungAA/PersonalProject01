@@ -28,4 +28,16 @@ public class UserDaoImpl implements UserDao {
 		return result;
 	}
 
+	@Override
+	public int idValidity(String user_id) {
+		int res = 0;
+		try {
+			res = sqlSession.selectOne(NAMESPACE+"id_validity", user_id);
+		} catch (Exception e) {
+			logger.info("[ERROR] idValidity");
+			e.printStackTrace();
+		}
+		return res;
+	}
+
 }

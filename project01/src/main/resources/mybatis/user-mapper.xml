@@ -12,11 +12,24 @@
 </select>
 
 <!-- 회원가입 -->
-
+<insert id="signup" parameterType="UserDto">
+	INSERT INFO USER_INFO
+	VALUES(USER_NO_SEQ.NEXTVAL, #{user_id}, #{user_pw}, #{user_name}, #{user_email}, 
+		'USER', #{user_phone}, #{user_address}, SYSDATE);
+</insert>
 
 <!-- 아이디 유효성 검사 -->
-
+<select id="id_validity" resultType="int" parameterType="String">
+	SELECT COUNT(*)
+	FROM USER_INFO
+	WHERE USER_ID = #{user_id}
+</select>
 
 <!-- 이메일 유효성 검사 -->
+<select id="email_validity" resultType="int" parameterType="String">
+	SELECT COUNT(*)
+	FROM USER_INFO
+	WHERE USER_EMAIL = #{user_email}
+</select>
 
 </mapper>

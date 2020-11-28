@@ -16,4 +16,9 @@ public class UserBizImpl implements UserBiz {
 		return userdao.login(dto);
 	}
 
+	@Override
+	public int idValidity(String user_id) {
+		return userdao.idValidity(user_id);
+	}
+
 }

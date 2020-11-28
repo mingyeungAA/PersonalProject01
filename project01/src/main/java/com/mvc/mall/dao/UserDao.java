@@ -7,5 +7,6 @@ public interface UserDao {
 	String NAMESPACE = "com.mvc.mall.user.";
 	
 	public UserDto login(UserDto dto);
+	public int idValidity(String user_id);
 
 }
