@@ -1,4 +1,38 @@
-	th {
-		text-align: left;
-		padding-right: 2rem;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+th {
+	text-align: left;
+	padding-right: 2rem;
+	color: #757575;
+	font-size: 13px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+	
+#postcode{
+	width: 80px;
+}
+input{
+	height: 25px;
+	border: 1px solid #ebebeb;
+}
+div{
+	position: absolute;
+	left: 30%;
+}
+
+.name_text{
+	padding-left: 2px;
+	padding-top: 6px;
+	text-align: center;
+	color: #808080;
+	font-size: 9pt;
+}
+
+.password_text{
+	padding-left: 2px;
+	padding-top: 6px;
+	text-align: center;
+	color: #808080;
+	font-size: 9pt;
+}

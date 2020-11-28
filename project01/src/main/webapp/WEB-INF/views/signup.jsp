@@ -15,11 +15,17 @@
 	<table>
 		<tr>
 			<th>아이디 </th>
-			<td><input type="text" class="user_id" name="user_id" required="required"></td>
+			<td>
+				<input type="text" class="user_id" name="user_id" required="required">
+				<span class="name_text">아이디를 입력해주세요.(영문소문자/숫자, 4~12자)</span>
+			</td>
 		</tr>
 		<tr>
 			<th>비밀번호</th>
-			<td><input type="password" class="user_pw" name="user_pw" required="required"></td>
+			<td>
+				<input type="password" class="user_pw" name="user_pw" required="required">
+				<span class="password_text">(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)</span>
+			</td>
 		</tr>
 		<tr>
 			<th>비밀번호 확인</th>
@@ -54,11 +60,7 @@
 				<input type="text" id="detailAddress" placeholder="나머지 주소" required="required">
 			</td>
 		</tr>
-		<tr>
-			<td>
-				<input type="">
-			</td>
-		</tr>
 	</table>
+	<div><input type="button" value="회원가입"></div>
 </body>
 </html>
