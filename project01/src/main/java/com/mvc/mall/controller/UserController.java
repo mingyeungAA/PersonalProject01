@@ -94,9 +94,9 @@ public class UserController {
 	}
 	
 	@RequestMapping("/signupres.do")
-	public String signupRes() {
+	public String signupRes(UserDto dto) {
 		logger.info(">> Join Us [signupRes] Controller");
-		
+		int res = userBiz.regist(dto);
 		return "";
 	}
 

@@ -26,4 +26,9 @@ public class UserBizImpl implements UserBiz {
 		return userdao.emailValidity(user_email);
 	}
 
+	@Override
+	public int regist(UserDto dto) {
+		return userdao.regist(dto);
+	}
+
 }

@@ -52,4 +52,16 @@ public class UserDaoImpl implements UserDao {
 		return res;
 	}
 
+	@Override
+	public int regist(UserDto dto) {
+		int res = 0;
+		try {
+			res = sqlSession.insert(NAMESPACE+"signup", dto);
+		} catch (Exception e) {
+			logger.info("[ERROR] regist");
+			e.printStackTrace();
+		}
+		return res;
+	}
+
 }
