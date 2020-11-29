@@ -39,6 +39,7 @@ let idRex;
 let idRex2;
 let han;
 let han2;
+let emailRex;
 $(document).ready(function(){
 	$(".user_id").keyup(function(){
 		var user_id = $(".user_id").val();
@@ -50,9 +51,7 @@ $(document).ready(function(){
 				idRex2 = /[a-zA-Z0-9]/;
 				han = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 				han2 = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]{6,12}$/;
-				
 				if(data==1){
-					console.log("data : "+data);
 					$(".id_text").text("");
 					$(".id_text").text("이미 존재하는 아이디입니다.");
 				}else{
@@ -72,8 +71,41 @@ $(document).ready(function(){
 				}
 			},
 			error: function(data){
-				alert("통신실패!!!");
+				alert("아이디 유효성 통신실패!!!ㅠ");
 			}
 		});
 	})
+	
+	//이메일 유효성
+	$(".user_email").keyup(function(){
+		let user_email = $(".user_email").val().trim();
+		$.ajax({
+			url: "emailvalidity.do?user_email="+user_email,
+			type: "get",
+			success: function(data){
+				emailRex =  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+				han = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+				if(data == 1){
+					$(".email_text").text("");
+					$(".email_text").text("이미 존재하는 아이디입니다. 다른 이메일로 다시 시도해주세요.");
+				}else{
+					if(emailRex.test(user_email)){
+						$(".email_text").text("사용가능한 이메일입니다.");
+					}else if(user_email == ""){
+						$(".email_text").text("이메일을 입력해주세요.");
+					}else{
+						$(".email_text").text("유효한 이메일을 입력해주세요.");
+					}
+				}
+			},
+			error: function(data){
+				alert("이메일 유효성 통신실패!!ㅠㅠ");
+			}
+		});
+	})
+	
+	//비밀번호 유효성  (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)
+	$(".user_pw").keyup(function(){
+		let user_pw = $(".user_pw").val().trim();
+	});
 })

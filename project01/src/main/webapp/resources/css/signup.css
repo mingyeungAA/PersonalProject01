@@ -64,6 +64,14 @@ input{
 	font-size: 9pt;
 }
 
+.email_text{
+	padding-left: 2px;
+	padding-top: 6px;
+	text-align: center;
+	color: #808080;
+	font-size: 9pt;
+}
+
 #address{
 	width: 250px;
 }

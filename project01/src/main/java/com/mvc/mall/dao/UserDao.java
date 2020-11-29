@@ -8,5 +8,6 @@ public interface UserDao {
 	
 	public UserDto login(UserDto dto);
 	public int idValidity(String user_id);
+	public int emailValidity(String user_email);
 
 }

@@ -21,4 +21,9 @@ public class UserBizImpl implements UserBiz {
 		return userdao.idValidity(user_id);
 	}
 
+	@Override
+	public int emailValidity(String user_email) {
+		return userdao.emailValidity(user_email);
+	}
+
 }

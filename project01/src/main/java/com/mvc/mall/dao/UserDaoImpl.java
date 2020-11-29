@@ -40,4 +40,16 @@ public class UserDaoImpl implements UserDao {
 		return res;
 	}
 
+	@Override
+	public int emailValidity(String user_email) {
+		int res = 0;
+		try {
+			res = sqlSession.selectOne(NAMESPACE+"email_validity", user_email);
+		} catch (Exception e) {
+			logger.info("[ERROR] emailValidity");
+			e.printStackTrace();
+		}
+		return res;
+	}
+
 }

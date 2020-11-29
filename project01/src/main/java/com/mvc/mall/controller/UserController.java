@@ -75,7 +75,19 @@ public class UserController {
 	@ResponseBody
 	public String idValidity(@RequestParam("user_id") String user_id) {
 		logger.info(">> Join Us [idValidity] Controller");
+		
 		int res = userBiz.idValidity(user_id);
+		String res1 = Integer.toString(res);
+		
+		return res1;
+	}
+	
+	@RequestMapping("/emailvalidity.do")
+	@ResponseBody
+	public String emailValidity(@RequestParam("user_email") String user_email) {
+		logger.info(">> Join Us [emailValidity] Controller");
+		
+		int res = userBiz.emailValidity(user_email);
 		String res1 = Integer.toString(res);
 		
 		return res1;
