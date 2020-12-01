@@ -83,7 +83,7 @@ $(document).ready(function(){
 			url: "emailvalidity.do?user_email="+user_email,
 			type: "get",
 			success: function(data){
-				emailRex =  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+				emailRex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 				han = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 				if(data == 1){
 					$(".email_text").text("");
