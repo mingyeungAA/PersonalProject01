@@ -17,22 +17,22 @@
 		<tr>
 			<th>아이디 </th>
 			<td>
-				<input type="text" class="user_id" name="user_id" required="required">
-				<span class="id_text">아이디를 입력해주세요.(영문소문자/숫자, 6~12자)</span>
+				<input type="text" class="user_id" name="user_id" required="required" autofocus="autofocus" placeholder="아이디를 입력해주세요.(영문소문자/숫자, 6~12자)">
+				<div class="id_text"></div>
 			</td>
 		</tr>
 		<tr>
 			<th>비밀번호</th>
 			<td>
-				<input type="password" class="user_pw" name="user_pw" required="required">
-				<span class="password_text">(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)</span>
+				<input type="password" class="user_pw" name="user_pw" required="required" placeholder="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)">
+				<div class="password_text"></div>
 			</td>
 		</tr>
 		<tr>
 			<th>비밀번호 확인</th>
 			<td>
 				<input type="password" class="user_pw_check" required="required">
-				<span class="password_check_text"></span>
+				<div class="password_check_text"></div>
 			</td>
 		</tr>
 		<tr>
@@ -45,7 +45,7 @@
 			<th>이메일</th>
 			<td>
 				<input type="email" class="user_email" name="user_email" required="required">
-				<span class="email_text"></span>
+				<div class="email_text"></div>
 			</td>
 		</tr>
 		<tr>

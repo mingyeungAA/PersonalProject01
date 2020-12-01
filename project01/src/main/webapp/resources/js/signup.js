@@ -40,6 +40,7 @@ let idRex2;
 let han;
 let han2;
 let emailRex;
+let pwRex;
 $(document).ready(function(){
 	$(".user_id").keyup(function(){
 		var user_id = $(".user_id").val();
@@ -107,5 +108,25 @@ $(document).ready(function(){
 	//비밀번호 유효성  (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)
 	$(".user_pw").keyup(function(){
 		let user_pw = $(".user_pw").val().trim();
+		let user_pw_check = $(".user_pw_check").val().trim();
+		var user_id = $(".user_id").val().trim();
+		pwRex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+		
+		if(user_pw == ""){
+			$(".password_text").text("비밀번호를 입력해주세요.");
+		}else if(user_pw.length < 8 || user_pw.length > 16){
+			$(".password_text").text("8~16자 이내로 입력해주세요.");
+		}else if(false === pwRex.test(user_pw)){
+			$(".password_text").text("영문 대소문자/숫자/특수문자 중 3가지 이상 조합해주세요.");
+		}else if(/(\w)\1\1\1/.test(user_pw)){
+			$(".password_text").text("같은 문자를 4번이상 사용하실 수 없습니다.");
+		}else if(user_pw.search(/\s/) != -1){
+			$(".password_text").text("비밀번호는 공백 없이 입력해주세요.");
+		}else if(user_pw.search(user_id) > -1){
+			$(".password_text").text("비밀번호에 아이디가 포함되어 있습니다.");
+		}
+		else{
+			$(".password_text").text("");
+		}
 	});
 })
