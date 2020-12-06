@@ -5,19 +5,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>header</title>
+<title>Angel Recipe</title>
+<link href="resources/css/header.css" rel="stylesheet">
 </head>
 <body>
-	<span onclick="location.href='main.do'"><img src="resources/image/LOGO.svg"></span>
-	<span>
-	<c:choose>
-		<c:when test="${login != null }">
-			<a href="logout.do">logout</a>
-		</c:when>
-		<c:otherwise>
-			<a href="loginform.do">login</a>
-		</c:otherwise>
-	</c:choose>
-	</span>
+	<div class="header">
+		<span onclick="location.href='main.do'" class="logo"><img src="resources/image/LOGO.svg"></span>
+			<ul id="mypage">
+				<li><a href="">MY PAGE</a>
+					<ul id="sub-menu">
+						<li><a href="#">주문조회</a></li>
+						<li><a href="#">찜한상품</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">회원정보</a></li>
+					</ul>
+				</li>
+		<c:choose>
+			<c:when test="${login != null }">
+				<li><a href="logout.do" class="logout">logout</a></li>
+			</c:when>
+			<c:otherwise>
+				<li><a href="loginform.do">login</a></li>
+			</c:otherwise>
+		</c:choose>
+		</ul>
+	</div>
 </body>
 </html>
