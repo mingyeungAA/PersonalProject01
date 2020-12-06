@@ -2,19 +2,22 @@
 	position: relative;
 	width: 100%;
 	height: 80px;
-	line-height: 80px;
+	line-height: 50px;
+	
 }
+
 .logo{
 	left: 40%;
 	position: absolute;
+	line-height: 50px;
+}
+.logo > img{
+	margin-top: 20px;
 }
 .logout:hover{
 	color: #ddd;
 }
-.my{
-	left:30px;
-	position: absolute;
-}
+
 a:link{
 	text-decoration: none;
 }
@@ -26,37 +29,58 @@ a:visited {
 	margin-right: 10px;	
 }
 
+.header_left{
+	position: absolute;
+	left:50px;
+}
+
 /* mypage 드롭다운 메뉴 */
-.mypage, #sub-menu{
+#mypage, #sub-menu{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-#sub-menu{
-	opacity: 0;
-	visibility: hidden;
+#mypage > li{
+	float: left;
+	display: inline-block;
 }
-
-li > a{
+#mypage > li > a{
 	display: block;
-	padding: 5px 10px;
 	text-align: center;
+	font-size: 11px;
+	display: block;
+	padding: 8px 10px;
+	height: 50px;
+}
+#sub-menu > li{
+	font-size: 11px;
+	text-align: center;
+	padding: 3px;
+
+}
+#sub-menu > li > a{
 	letter-spacing: 0.05em;
 }
 #sub-menu{
-	position:absolute;
-	background: white;
-}
-#sub-menu > li{
-	padding: 10px 16px;
-}
 
-.mypage:hover #sub-menu{
+	opacity: 0;
+	visibility: hidden;
+	background-color: white;
+}
+#mypage > li:hover #sub-menu{
 	opacity: 1;
 	visibility: visible;
 }
 
-
-/**/
-
-
+/* header 오른쪽 부분*/
+.header_right{
+	padding-top: 10px;
+	right: 60px;
+	position: absolute;
+	line-height: 50px;
+}
+.search{
+	border: 1px solid #ebebeb;
+	width: 150px;
+	height: 30px;
+}
