@@ -94,10 +94,14 @@ public class UserController {
 	}
 	
 	@RequestMapping("/signupres.do")
-	public String signupRes(UserDto dto) {
+	public String signupRes(UserDto dto,String addr1, String addr2, String addr3) {
 		logger.info(">> Join Us [signupRes] Controller");
+		dto.setUser_address("("+addr1+")"+addr2+" "+addr3);
 		int res = userBiz.regist(dto);
-		return "";
+		if(res > 0) {
+			return "redirect:loginform.do";
+		}
+		return "signup";
 	}
 
 }

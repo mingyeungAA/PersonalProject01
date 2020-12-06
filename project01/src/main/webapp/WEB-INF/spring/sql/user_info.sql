@@ -25,4 +25,6 @@ INSERT INTO USER_INFO
 VALUES(USER_NO_SEQ.NEXTVAL, 'ming','ming','밍밍','mingyeung@naver.com'
 	,'USER','010-2075-6089','서울시 노원구',SYSDATE);
 
+delete from user_info
+where user_no = 1;
 

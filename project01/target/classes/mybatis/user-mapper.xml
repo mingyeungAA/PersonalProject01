@@ -13,9 +13,8 @@
 
 <!-- 회원가입 -->
 <insert id="signup" parameterType="UserDto">
-	INSERT INFO USER_INFO
-	VALUES(USER_NO_SEQ.NEXTVAL, #{user_id}, #{user_pw}, #{user_name}, #{user_email}, 
-		'USER', #{user_phone}, #{user_address}, SYSDATE);
+	INSERT INTO USER_INFO
+	VALUES(USER_NO_SEQ.NEXTVAL, #{user_id}, #{user_pw}, #{user_name}, #{user_email},'USER', #{user_phone}, #{user_address}, SYSDATE)
 </insert>
 
 <!-- 아이디 유효성 검사 -->
