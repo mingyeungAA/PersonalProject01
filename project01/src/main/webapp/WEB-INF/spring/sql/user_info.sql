@@ -28,3 +28,7 @@ VALUES(USER_NO_SEQ.NEXTVAL, 'ming','ming','밍밍','mingyeung@naver.com'
 delete from user_info
 where user_no = 1;
 
+update USER_INFO
+set user_role='ADMIN'
+where user_no = 23;
+

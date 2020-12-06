@@ -24,6 +24,11 @@
 					<li><a href="loginform.do">LOGIN</a></li>
 				</c:otherwise>
 			</c:choose>
+			<c:choose>
+				<c:when test="${login.user_role == 'ADMIN' }">
+					<li><a href="">ADMIN</a></li>
+				</c:when>
+				<c:otherwise>
 					<li><a href="">MY PAGE</a>
 						<ul id="sub-menu">
 							<li><a href="#">주문조회</a></li>
@@ -32,6 +37,8 @@
 							<li><a href="#">회원정보</a></li>
 						</ul>
 					</li>
+				</c:otherwise>
+			</c:choose>
 				</ul>
 			</div>
 			<div class="header_right">

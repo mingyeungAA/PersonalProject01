@@ -11,7 +11,7 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-	<p>apappapa</p>
+	<p>apappapa</p>	
 	<p>메인이다아아앙ㅇ</p>
 
 	
