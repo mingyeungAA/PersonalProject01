@@ -1,5 +1,7 @@
 # Personal Project 01
 
+> Online Shopping Mall
+
 ### 🚩Tech Stack & Open-source libraries
 
 - Java 1.6
