@@ -2,9 +2,9 @@
 
 ### 🚩Tech Stack & Open-source libraries
 
-- Java
+- Java 1.6
 
-- [Spring Framework](https://spring.io/projects/spring-framework)
+- [Spring Framework](https://spring.io/projects/spring-framework) 3.1.1
 
 - [Mybatis](https://mybatis.org/mybatis-3/ko/index.html)
 
