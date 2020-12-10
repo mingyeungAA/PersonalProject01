@@ -26,7 +26,8 @@
 			</c:choose>
 			<c:choose>
 				<c:when test="${login.user_role == 'ADMIN' }">
-					<li><a href="">ADMIN</a></li>
+					<li><a href="">ADMIN PAGE</a></li>
+					<li><i class="far fa-bell"></i></li>
 				</c:when>
 				<c:otherwise>
 					<li><a href="">MY PAGE</a>
@@ -42,6 +43,7 @@
 				</ul>
 			</div>
 			<div class="header_right">
+				<a href="noticeform.do">NOTICE</a>
 				<input type="text" class="search" placeholder="search.."/>
 				<i class="fas fa-shopping-cart"></i>
 			</div>
