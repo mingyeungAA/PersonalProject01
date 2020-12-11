@@ -1,7 +1,5 @@
 package com.mvc.mall.dto;
 
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class NoticeDto {
 	
@@ -10,15 +8,14 @@ public class NoticeDto {
 	private String notice_writer;
 	private String notice_content;
 	private int notice_viewer;
-	@JSONf
-	private Date notice_regdate;
+	private String notice_regdate;
 	
 	public NoticeDto() {
 		
 	}
 
 	public NoticeDto(int notice_no, String notice_title, String notice_writer, String notice_content, int notice_viewer,
-			Date notice_regdate) {
+			String notice_regdate) {
 		super();
 		this.notice_no = notice_no;
 		this.notice_title = notice_title;
@@ -68,11 +65,11 @@ public class NoticeDto {
 		this.notice_viewer = notice_viewer;
 	}
 
-	public Date getNotice_regdate() {
+	public String getNotice_regdate() {
 		return notice_regdate;
 	}
 
-	public void setNotice_regdate(Date notice_regdate) {
+	public void setNotice_regdate(String notice_regdate) {
 		this.notice_regdate = notice_regdate;
 	}
 	

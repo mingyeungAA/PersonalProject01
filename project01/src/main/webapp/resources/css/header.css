@@ -66,12 +66,12 @@ a:visited {
 #sub-menu{
 
 	opacity: 0;
-	visibility: hidden;
+	display: none;
 	background-color: white;
 }
 #mypage > li:hover #sub-menu{
 	opacity: 1;
-	visibility: visible;
+	display: block;
 }
 
 /* header 오른쪽 부분*/

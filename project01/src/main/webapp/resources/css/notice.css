@@ -1,0 +1,28 @@
+table{
+	width: 90%;
+	border-collapse: collapse;
+	margin-left: 5%;
+	table-layout: fixed;
+}
+th{
+	color: #757575;
+	padding: 20px 0;
+	font-size: 10px;
+}
+tr{
+	border-bottom: 1px solid #ebebeb;
+}
+td{
+	text-align: center;
+	color: #555555;
+	padding: 15px 0px 14px 10px;
+	font-size: 11px;
+}
+a{
+	text-decoration: none;
+	color: #555555;
+}
+a:visited{
+	text-decoration: none;
+	color: #555555;
+}
