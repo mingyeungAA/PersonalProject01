@@ -40,4 +40,74 @@
 	WHERE NOTICE_NO = #{notice_no}
 </update>
 
+<!-- *********************************** -->
+ 	<!-- 총 게시글 갯수 출력 -->
+	<select id="countNotice" resultType="int">
+		SELECT COUNT(*)
+		FROM NOTICE
+	</select>
+	
+	<!-- 갯수 출력 title -->
+	<select id="searchcountTitle" resultType="int" parameterType="String">
+		SELECT COUNT(*)
+		FROM (
+			SELECT *
+			FROM NOTICE
+			WHERE NOTICE_TITLE LIKE '%'||#{notice_title}||'%')
+	</select>
+	
+	<!-- 갯수 출력 content -->
+	<select id="searchcountContent" resultType="int" parameterType="String">
+		SELECT COUNT(*)
+		FROM (
+			SELECT *
+			FROM NOTICE
+			WHERE NOTICE_CONTENT LIKE '%'||#{notice_content}||'%')
+	</select>
+	
+	<!-- title로 search 후 페이징 -->
+	<select id="selectSearchTitle" parameterType="hashMap" resultType="NoticeDto">
+		SELECT *
+		FROM(
+			SELECT ROWNUM RN, A.*
+			FROM (
+					SELECT *
+					FROM NOTICE
+					WHERE NOTICE_TITLE LIKE '%'||#{notice_title}||'%'
+					ORDER BY NOTICE_NO DESC
+				)A
+			)
+		WHERE RN BETWEEN #{pagingdto.start} AND #{pagingdto.end}
+	</select>
+	
+	<!-- content로 search 후 페이징 -->
+	 <select id="selectSearchContent" parameterType="hashMap" resultType="NoticeDto">
+	 	SELECT *
+		FROM(
+			SELECT ROWNUM RN, A.*
+			FROM (
+					SELECT *
+					FROM NOTICE
+					WHERE NOTICE_CONTENT LIKE '%'||#{notice_content}||'%'
+					ORDER BY NOTICE_NO DESC
+				)A
+			)
+		WHERE RN BETWEEN #{pagingdto.start} AND #{pagingdto.end}
+	 </select>
+	 
+	<!-- 페이징과 리스트 출력 -->
+	<select id="selectList" parameterType="com.mvc.mall.dto.PagingDto" resultType="NoticeDto">
+		SELECT *
+		FROM(
+			SELECT ROWNUM RN, A.*
+			FROM(
+				SELECT *
+				FROM NOTICE
+				ORDER BY NOTICE_NO DESC
+				)A
+			)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+
+
 </mapper>

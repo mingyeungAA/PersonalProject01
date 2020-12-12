@@ -33,3 +33,29 @@ a:visited{
 	padding-top: 20px;
 	margin-left: 90%;
 }
+.search__area{
+	padding-top: 2%;
+	margin-left: 40%;
+}
+.search__type{
+	display: inline-block;
+}
+.search_bar{
+	border-color: #ebebeb;
+	border-style: solid;
+	outline: none;
+}
+.search_btn{
+	border: none;
+	background-color: white;
+}
+.search_btn:focus{
+	border:none;
+	outline: none;
+}
+li{
+	list-style: none;
+}
+.pagingdesign{
+	margin-right: 5%;
+}

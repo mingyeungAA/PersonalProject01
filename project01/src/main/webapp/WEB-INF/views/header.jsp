@@ -27,7 +27,7 @@
 			<c:choose>
 				<c:when test="${login.user_role == 'ADMIN' }">
 					<li><a href="">ADMIN PAGE</a></li>
-					<li><i class="far fa-bell"></i></li>
+					<li><i class="far fa-bell alarm"></i></li>
 				</c:when>
 				<c:otherwise>
 					<li><a href="">MY PAGE</a>
