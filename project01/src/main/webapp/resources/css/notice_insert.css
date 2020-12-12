@@ -1,0 +1,25 @@
+textarea{
+	padding-top: 20px;
+	resize: none;
+}
+table{
+	width: 90%;
+	border-collapse: collapse;
+	margin-left: 3%;
+}
+th{
+	color: #757575;
+	padding: 20px 10px;
+	font-size: 10px;
+	font-weight: normal;
+}
+tr{
+	border-bottom: 1px solid #ebebeb;
+}
+input[type=text]{
+	border-color: #ebebeb;
+	border-radius: 5px;
+}
+input::placeholder{
+	font-size: 10px;
+}

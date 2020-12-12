@@ -1,0 +1,36 @@
+textarea{
+	resize: none;
+}
+table{
+	width: 90%;
+	border-collapse: collapse;
+	margin-left: 3%;
+}
+th{
+	color: #757575;
+	padding: 20px 10px;
+	font-size: 10px;
+	font-weight: normal;
+}
+tr{
+	border-bottom: 1px solid #ebebeb;
+}
+td{
+	color: #555555;
+	font-size: 12px;
+}
+textarea{
+	padding-top: 20px;
+	border: none;
+}
+input[type=button]{
+	background-color: white;
+	border: 1px solid #808080;
+}
+.view{
+	width: 10z0px;
+}
+.input__area{
+	padding-top: 1%;
+	padding-left: 80%;
+}

@@ -10,14 +10,15 @@
 </select>
 
 <select id="NoticeDetail" parameterType="int" resultType="NoticeDto">
-	SELECT *
+	SELECT NOTICE_NO, NOTICE_TITLE, NOTICE_WRITER, NOTICE_CONTENT, 
+			NOTICE_VIEWER, TO_CHAR(NOTICE_REGDATE,'yyyy-MM-dd') AS NOTICE_REGDATE
 	FROM NOTICE
 	WHERE NOTICE_NO = #{notice_no}
 </select>
 
 <insert id="NoticeInsert" parameterType="NoticeDto">
 	INSERT INTO NOTICE
-	VALUES(NOTICE_NO_SEQ.NEXTVAL, #{notice_title}, #{notice_wirter}, #{notice_content}, 0, SYSDATE)
+	VALUES(NOTICE_NO_SEQ.NEXTVAL, #{notice_title}, #{notice_writer}, #{notice_content}, 0, SYSDATE)
 </insert>
 
 <update id="NoticeUpdate" parameterType="NoticeDto">

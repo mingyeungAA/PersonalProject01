@@ -35,7 +35,7 @@
 					<c:forEach items="${list }" var="dto">
 						<tr>
 							<td>${dto.notice_no }</td>
-							<td style="text-align: left"><a href="">${dto.notice_title }</a></td>
+							<td style="text-align: left"><a href="noticedetail.do?notice_no=${dto.notice_no }" class="godetail">${dto.notice_title }</a></td>
 							<td>${dto.notice_writer }</td>
 							<td>${dto.notice_regdate }</td>
 							<td>${dto.notice_viewer }</td>
@@ -44,5 +44,10 @@
 				</c:otherwise>
 			</c:choose>
 		</table>
+		<c:if test="${login.user_role eq 'ADMIN' }">
+			<div class="insert">
+				<input type="button" value="글쓰기" onclick="location.href='noticeinsert.do'">
+			</div>
+		</c:if>
 </body>
 </html>
