@@ -8,7 +8,7 @@
 <bean id="logAop" class="com.mvc.mall.common.aop.LogAop"/>
 	
 	<aop:config>
-		<aop:pointcut expression="execution(public * com.mvc.upgrade.model.dao.*Dao*.*(..))" id="daoPoint"/>
+		<aop:pointcut expression="execution(public * com.mvc.mall.dao.*Dao*.*(..))" id="daoPoint"/>
 		<aop:aspect ref="logAop" id="logAop">
 			<aop:before method="beforeLog" pointcut-ref="daoPoint"/>
 			<aop:after method="afterLog" pointcut-ref="daoPoint"/>
