@@ -18,7 +18,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 		logger.info("**[LoginInterceptor]** : preHandle");
 		
 		//이 조건일때만 controller로 넘어간다!
-		if(request.getRequestURI().contains("/loginform.do") || request.getRequestURI().contains("/ajaxlogin.do") || 
+		if(request.getRequestURI().contains("/loginform.do") || 
+				request.getRequestURI().contains("/ajaxlogin.do") || 
 				request.getSession().getAttribute("login") != null) {  //이 조건일때만 controller로 넘어간다.
 			
 			return true;
