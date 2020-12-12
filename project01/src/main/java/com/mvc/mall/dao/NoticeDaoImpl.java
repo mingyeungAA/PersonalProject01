@@ -25,7 +25,7 @@ public class NoticeDaoImpl implements NoticeDao {
 	public List<NoticeDto> list(PagingDto pagingdto) {
 		List<NoticeDto> result = new ArrayList<NoticeDto>();
 		try {
-			result = sqlSession.selectList(NAMESPACE+"NoticeList", pagingdto);
+			result = sqlSession.selectList(NAMESPACE+"selectList", pagingdto);
 		} catch (Exception e) {
 			logger.info("[ERROR] NoticeDaoImpl List");
 			e.printStackTrace();
