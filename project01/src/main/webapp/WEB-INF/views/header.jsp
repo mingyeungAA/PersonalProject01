@@ -30,9 +30,9 @@
 					<li><i class="far fa-bell alarm"></i></li>
 				</c:when>
 				<c:otherwise>
-					<li><a href="">MY PAGE</a>
+					<li><a href="mypage.do">MY PAGE</a>
 						<ul id="sub-menu">
-							<li><a href="#">주문조회</a></li>
+							<li><a href="">주문조회</a></li>
 							<li><a href="#">찜한상품</a></li>
 							<li><a href="#">게시판</a></li>
 							<li><a href="#">회원정보</a></li>

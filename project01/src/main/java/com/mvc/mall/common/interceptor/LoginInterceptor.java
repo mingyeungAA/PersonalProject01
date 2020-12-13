@@ -20,6 +20,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 		//이 조건일때만 controller로 넘어간다!
 		if(request.getRequestURI().contains("/loginform.do") || 
 				request.getRequestURI().contains("/ajaxlogin.do") || 
+				request.getRequestURI().contains("/mypage.do") ||
 				request.getSession().getAttribute("login") != null) {  //이 조건일때만 controller로 넘어간다.
 			
 			return true;

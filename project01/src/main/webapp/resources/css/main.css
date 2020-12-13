@@ -1,0 +1,45 @@
+.item__box{
+	margin-left: 2%;
+}
+li{
+	list-style: none;
+}
+.item__detail > li{
+
+	display: inline-block;
+	margin-right: 20px;
+}
+.item__image{
+	width: 250px;
+	height:300px;
+}
+
+
+/* color */
+.chips{
+	width: 15px;
+	height: 2px;
+	margin: 0 1px 2px;
+	display: inline-block;
+}
+.ivory__color{
+	background-color: #FEFFEF;
+}
+.baige__color{
+	background-color: #D7B170;
+}
+.yellow__color{
+	background-color: #FDEB00;
+}
+.pink__color{
+	background-color: #FEC0CB;
+}
+
+/**/
+.item__content__box{
+	padding: 0px;
+}
+.item__content{
+	font-size: 5px;
+	color: #999999;
+}

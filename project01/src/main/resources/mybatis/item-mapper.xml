@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mvc.mall.item">
+
+<select id="Itemlist" resultType="ItemDto" parameterType="ItemDto">
+	SELECT ITEM_NO, GROUP_NO, CATEGORY_NO, ITEM_NAME, ITEM_COLOR, ITEM_SIZE,
+		ITEM_PRICE, ITEM_SKU, ITEM_PHOTO, ITEM_CONTENT, CREATEDAT
+	FROM ITEM
+</select>
+
+</mapper>
