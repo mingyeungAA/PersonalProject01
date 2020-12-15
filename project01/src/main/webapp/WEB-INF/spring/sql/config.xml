@@ -3,15 +3,17 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="com.mvc.mall.dto.UserDto" alias="UserDto"/>
+		<typeAlias type="com.mvc.mall.dto.UserDto" alias="UserDto" />
 		<typeAlias type="com.mvc.mall.dto.NoticeDto" alias="NoticeDto"/>
 		<typeAlias type="com.mvc.mall.dto.ItemDto" alias="ItemDto"/>
+		<typeAlias type="com.mvc.mall.dto.QADto" alias="QADto"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="/mybatis/user-mapper.xml"/>
 		<mapper resource="/mybatis/notice-mapper.xml"/>
 		<mapper resource="/mybatis/item-mapper.xml"/>
+		<mapper resource="/mybatis/qanda-mapper.xml"/>
 	</mappers>
 	
 </configuration>

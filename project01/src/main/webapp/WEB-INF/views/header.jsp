@@ -44,6 +44,7 @@
 			</div>
 			<div class="header_right">
 				<a href="noticeform.do">NOTICE</a>
+				<a href="QandA.do">Q&A</a>
 				<input type="text" class="search" placeholder="search.."/>
 				<i class="fas fa-shopping-cart"></i>
 			</div>
