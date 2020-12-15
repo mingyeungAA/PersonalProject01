@@ -23,10 +23,10 @@ public class QandAController {
 		return "qanda";
 	}
 	
-	@RequestMapping("")
+	@RequestMapping("/QandAInsert.do")
 	public String QA_Insert() {
 		
-		return "";
+		return "qanda_insert";
 	}
 
 }

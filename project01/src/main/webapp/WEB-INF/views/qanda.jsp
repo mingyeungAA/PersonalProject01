@@ -33,10 +33,10 @@
 			<c:otherwise>
 				<c:forEach items="${list }" var="dto">
 					<tr>
-						<td>${dto.qa_no }</td>
-						<td>${dto.qa_title }</td>
-						<td>${dto.user_name }</td>
-						<td>${dto.qa_regdate }</td>
+						<td class="table__data">${dto.qa_no }</td>
+						<td style="text-align: left">${dto.qa_title }</td>
+						<td class="table__data">${dto.user_name }</td>
+						<td class="table__data">${dto.qa_regdate }</td>
 					</tr>
 				</c:forEach>
 			</c:otherwise>
@@ -46,8 +46,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td>
-				<input type="button" value="글쓰기" onclick="">
+			<td colspan="4" align="right">
+				<input type="button" value="글쓰기" onclick="location.href='QandAInsert.do'">
 			</td>
 		</tr>
 	</table>
