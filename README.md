@@ -20,5 +20,21 @@
 
   - [daum 우편번호 서비스](http://postcode.map.daum.net/guide#usage) - postcode & address
 
-    
+<br>
 
+---
+
+#### pages
+
+- [ ] Main
+- [x] Header
+- [ ] Login
+- [x] Register
+- [ ] Mypage
+- [ ] Find id, pw
+- [x] Notice
+- [ ] Q&A
+- [ ] Alarm
+- [ ] Admin page
+
+<br>
