@@ -24,7 +24,7 @@
 			<th>제목</th>
 			<td>
 				<select name="title_type">
-					<option></option>
+					<option value=""></option>
 					<option></option>
 					<option></option>
 					<option></option>>
