@@ -20,9 +20,9 @@ import com.mvc.mall.biz.UserBiz;
 import com.mvc.mall.dto.UserDto;
 
 @Controller
-public class UserController {
+public class LoginController {
 
-	private Logger logger = LoggerFactory.getLogger(UserController.class);
+	private Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
 	@Autowired
 	private UserBiz userBiz;
