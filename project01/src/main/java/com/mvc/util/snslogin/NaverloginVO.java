@@ -31,7 +31,7 @@ public class NaverloginVO {
 
 	public String generateRandomString() {
 		
-		return null;
+		return UUID.setA;
 	}
 	
 	
