@@ -159,7 +159,7 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
+
 		<!-- For AOP -->
 		<!-- aspectjweaver -->
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
@@ -184,6 +184,13 @@
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
+		</dependency>
+
+		<!-- naver -->
+		<dependency>
+			<groupId>com.github.scribejava</groupId>
+			<artifactId>scribejava-core</artifactId>
+			<version>7.1.1</version>
 		</dependency>
 
 		<!-- 비밀번호 암호화 -->

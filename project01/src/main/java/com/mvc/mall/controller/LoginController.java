@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mvc.mall.biz.UserBiz;
 import com.mvc.mall.dto.UserDto;
+import com.mvc.util.snslogin.NaverloginVO;
 
 @Controller
 public class LoginController {
@@ -28,7 +29,15 @@ public class LoginController {
 	private UserBiz userBiz;
 	
 	@Autowired
+	private NaverloginVO naverloginVO;
+	
+	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
+	
+	@Autowired
+	private void setNaverloginVO(NaverloginVO naverloginVO) {
+		this.naverloginVO = naverloginVO;
+	}
 	
 	
 	/* 로그인 */
@@ -54,6 +63,13 @@ public class LoginController {
 		map.put("check", check);
 		
 		return map;
+	}
+	
+	/* NAVER 로그인 */
+	@RequestMapping("")
+	public String NaverLogin() {
+		
+		return "";
 	}
 	
 	/* 로그아웃 */
